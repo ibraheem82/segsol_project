@@ -1,0 +1,46 @@
+{% load static %}
+
+<!-- Start header
+    ============================================= -->
+    <header class="header header-1">
+		<div class="main-navigation">
+			<nav id="navbar_top" class="navbar navbar-expand-lg">
+				<div class="container g-0">
+					<a class="navbar-brand" href="{% url 'index' %}">
+						<img src="{% static 'assets/img/logo/segsol.jpg' %}" class="logo-display" alt="thumb">
+						<img src="{% static 'assets/img/logo/segsol.jpg' %}" class="logo-scrolled" alt="thumb">
+					</a>
+					<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main_nav" aria-expanded="false" aria-label="Toggle navigation">
+						<span class="navbar-toggler-icon"><i class="ti-menu-alt"></i></span>
+					</button>
+					<div class="collapse navbar-collapse" id="main_nav">
+						<ul class="navbar-nav ms-auto">
+                            <li class="nav-item dropdown">
+								<a class="nav-link" href="#" data-bs-toggle="dropdown">  	
+                                   Home
+								</a>
+								
+							</li>
+							<li class="nav-item"><a class="nav-link" href="{% url 'about' %}"> About </a></li>
+							<li class="nav-item dropdown">
+								<a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">  	
+                                   Service
+								</a>
+								
+							</li>
+						
+							
+							{% comment %} <li class="nav-item dropdown">
+								<a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"> 
+									Blog  
+								</a>
+								
+							</li> {% endcomment %}
+							<li class="nav-item"><a class="nav-link" href="contact.html"> Contact </a></li>
+						</ul>
+					</div> <!-- navbar-collapse.// -->
+				</div> <!-- container -->
+			</nav>
+		</div>
+    </header>
+    <!-- End header -->

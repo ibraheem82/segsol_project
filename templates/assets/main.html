@@ -1,0 +1,80 @@
+{% load static %}
+<!doctype html>
+<html class="no-js" lang="zxx">
+
+<head>	
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<title>  segsol &amp; It</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<!-- Place favicon.ico in the root directory -->
+	<link rel="shortcut icon" type="image/x-icon" href="assets/img/logo/favicon.png">
+	<!-- ========== Start Stylesheet ========== -->
+	<link href="{% static 'assets/css/bootstrap.min.css' %}" rel="stylesheet" />
+	<link href="{% static 'assets/css/fontawesome.min.css' %}" rel="stylesheet" />
+	<link href="{% static 'assets/css/magnific-popup.css' %}" rel="stylesheet" />
+	<link href="{% static 'assets/css/owl.carousel.min.css' %}" rel="stylesheet" />
+	<link href="{% static 'assets/css/owl.theme.default.min.css' %} " rel="stylesheet" />
+	<link href="{% static 'assets/css/animate.css' %}" rel="stylesheet" />
+	<link href="{% static 'assets/css/themify-icons.css' %}" rel="stylesheet" />
+	<link href="{% static 'assets/css/icofont.min.css' %}" rel="stylesheet" />
+	<link href="{% static 'assets/css/site-flaticon.css' %}" rel="stylesheet" />
+	<link href="{% static 'style.css' %}" rel="stylesheet">
+	<link href="{% static 'assets/css/responsive.css' %}" rel="stylesheet" />
+	<!-- ========== End Stylesheet ========== -->
+  
+</head>
+
+<body id="bdy">		
+
+	<!-- Start PreLoader 
+    ============================================= -->
+	<div class="se-pre-con"></div>
+	<!-- Start PreLoader-->
+	
+	{% include 'assets/header.html' %}
+	
+    {% block maincontent %}
+    
+    {% endblock maincontent %}
+	
+	
+	<div class="clearfix"></div>
+	
+	{% include 'assets/footer.html' %}
+	
+	
+	<!-- Start Scroll top
+	============================================= -->
+	<a href="#bdy" id="scrtop" class="smooth-menu"><i class="ti-arrow-up"></i></a>
+	<!-- End Scroll top-->
+	
+  	<!-- jQuery Frameworks
+    ============================================= -->
+	<script src="{% static 'assets/js/jquery-1.12.4.min.js' %}"></script>
+	<script src="{% static 'assets/js/popper.min.js' %}"></script>
+    <script src="{% static 'assets/js/bootstrap.min.js' %}"></script>
+	<script src="{% static 'assets/js/bootstrap-menu.js' %}"></script>
+    <script src="{% static 'assets/js/jquery.easing.min.js' %}"></script>
+	<script src="{% static 'assets/js/jquery.appear.js' %}"></script>
+	<script src="{% static 'assets/js/modernizr.custom.13711.js' %}"></script>
+    <script src="{% static 'assets/js/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'assets/js/jquery.magnific-popup.min.js' %}"></script>
+	<script src="{% static 'assets/js/isotope.pkgd.min.js' %}"></script>
+    <script src="{% static 'assets/js/imagesloaded.pkgd.min.js' %}"></script>
+    <script src="{% static 'assets/js/wow.min.js' %}"></script>
+    <script src="{% static 'assets/js/wodry.min.js' %}"></script>
+	<script src="{% static 'assets/js/count-to.js' %}"></script>
+	<script src="{% static 'assets/js/progress-bar.min.js' %}"></script>
+	<script src="{% static 'assets/js/color-option.js' %}"></script>
+	<script src="{% static 'assets/js/typed.js' %}"></script>
+	<script src="{% static 'assets/js/YTPlayer.min.js' %}"></script>
+	<script src="{% static 'assets/js/jquery.mixitup.min.js' %}"></script>
+	<script src="{% static 'assets/js/active-class.js' %}"></script>
+    <script src="{% static 'assets/js/main.js' %}"></script>
+	
+</body>
+
+</html>
