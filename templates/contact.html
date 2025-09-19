@@ -1,0 +1,149 @@
+
+
+
+
+
+
+
+{% extends 'assets/main.html' %}
+{% load static %}
+{% block maincontent %}
+
+        
+    <!-- Start Breadcrumb
+    ============================================= -->
+    {% comment %} style="background: url({% static 'img/breadcrumb/breadcrumb.jpg' %}) {% endcomment %}
+
+
+
+
+    <main class="main">
+        
+		<!-- Start Breadcrumb
+		============================================= -->
+		<div class="site-breadcrumb" style="background: url({% static 'assets/img/breadcrumb/breadcrumb.jpg' %})">
+			<div class="container">
+			<h2 class="breadcrumb-title">Contact Us</h2>
+				<ul class="breadcrumb-menu clearfix">
+					<li><a href="{% url 'index' %}">Home</a></li>
+					<li class="active">Contact Us</li>
+				</ul>
+			</div>
+		</div>
+        <!-- End Breadcrumb -->
+        
+		<!-- Start Contact Us
+		============================================= -->
+		<div class="contact-us de-padding">
+			<div class="contact-shape">
+				<img src="{% static 'assets/img/bg/contact-shape.png' %}" alt="thumb">
+			</div>
+			<div class="container">
+				<div class="contact-us-wpr">
+					<div class="row g-5">
+						<div class="col-xl-5 col-lg-5">
+							<div class="faq-pic">
+									<img src="{% static 'assets/img/bg/bg-2.jpg' %}" alt="thumb">
+									<div class="faq-pic-overlay">
+										<ul>
+											<li>
+												<div class="faq-add">
+													<i class="flaticon-placeholder"></i>
+													<div class="faq-ad">
+														<h4>Office Address</h4>
+														<p class="mb-0">
+                                                            {{location}}
+
+															<br>
+															Nigeria
+														</p>
+													</div>
+												</div>
+											</li>
+											<li>
+												<div class="faq-add">
+													<i class="flaticon-call"></i>
+													<div class="faq-ad">
+														<h4>Call Us</h4>
+														<p class="mb-0">
+                                                            {{phone}}
+															<br>
+															213-369-4139
+														</p>
+													</div>
+												</div>
+											</li>
+											<li>
+												<div class="faq-add">
+													<i class="flaticon-envelope"></i>
+													<div class="faq-ad">
+														<h4>Email Us</h4>
+														<p class="mb-0">
+															{{email}}
+															
+															<br>
+														
+														</p>
+													</div>
+												</div>
+											</li>
+										</ul>
+									</div>
+								</div>
+						</div>
+						<div class="col-xl-7 col-lg-7">
+							<form class="contact-form" method="post" action="">
+								<h4 class="contact-tl">Contact us</h4>
+								<div class="row">
+									<div class="col-md-6">
+										<div class="form-group">
+											<input type="text" class="form-control" name="fname" placeholder="Your Full Name*">
+											<span class="alert alert-error"></span>
+										</div>
+									</div>
+									<div class="col-md-6">
+										<div class="form-group">
+											<input type="email" class="form-control" name="email" placeholder="Your Email Address*">
+											<span class="alert alert-error"></span>
+										</div>
+									</div>
+									<div class="col-md-12">
+										<div class="form-group">
+											<input type="text" class="form-control" name="subject" placeholder="Subject...">
+											<span class="alert alert-error"></span>
+										</div>
+									</div>
+									<div class="col-md-12">
+										<textarea class="form-control" name="message" placeholder="Your Message..."></textarea>
+										<div class="contact-sub-btn">
+											<button type="submit" name="submit" id="submit" class="btn-6">
+												Send Message 
+												<i class="fas fa-chevron-right"></i>
+											</button>
+										</div>
+										<!-- Alert Message -->
+										<div class="alert-notification">
+											<div id="message" class="alert-msg"></div>
+										</div>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- End Contact Us -->
+		
+		<!-- Start Google Map
+		============================================= -->
+		<div class="g-map-area">
+			<div class="g-map--wrapper text-center">
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.700759224992!2d3.423561373826009!3d6.432472024216877!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103bf52ec17aa05b%3A0x24667afe921744d8!2s22%20Amodu%20Tijani%20Cl%2C%20Victoria%20Island%2C%20Lagos%20106104%2C%20Lagos!5e0!3m2!1sen!2sng!4v1751526853958!5m2!1sen!2sng" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+			</div>
+		</div>
+		<!-- End Google Map -->
+		
+	</main>	
+ 
+{% endblock maincontent %}
