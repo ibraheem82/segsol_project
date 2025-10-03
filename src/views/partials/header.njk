@@ -1,0 +1,49 @@
+{# Header partial - Nunjucks #}
+<header class="header header-1">
+  <div class="main-navigation">
+    <nav id="navbar_top" class="navbar navbar-expand-lg">
+      <div class="container g-0">
+        <a class="navbar-brand" href="/">
+          <img src="{{ asset('img/logo/segsol.jpg') }}" class="logo-display" alt="SegSol logo">
+          <img src="{{ asset('img/logo/segsol.jpg') }}" class="logo-scrolled" alt="SegSol logo">
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main_nav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"><i class="ti-menu-alt"></i></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="main_nav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link {% if path == '/' %}active{% endif %}" href="/">Home</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link {% if path == '/about' %}active{% endif %}" href="/about">About</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link {% if path == '/projects' %}active{% endif %}" href="/projects">Projects</a>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle {% if path == '/services' %}active{% endif %}" href="#" data-bs-toggle="dropdown">
+                Service
+              </a>
+              <ul class="dropdown-menu">
+                {# Add your actual service links here or convert to a simple link if no dropdown #}
+                <li><a class="dropdown-item" href="/services/consulting">Consulting</a></li>
+                <li><a class="dropdown-item" href="/services/security">Security</a></li>
+                <li><a class="dropdown-item" href="/services/cloud">Cloud</a></li>
+              </ul>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link {% if path == '/contact' %}active{% endif %}" href="/contact">Contact</a>
+            </li>
+          </ul>
+        </div> <!-- navbar-collapse -->
+      </div> <!-- container -->
+    </nav>
+  </div>
+</header>

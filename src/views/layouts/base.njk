@@ -1,0 +1,98 @@
+<!doctype html>
+<html class="no-js" lang="zxx">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>{{ title or 'SEGSOL - IT Security Solutions' }}</title>
+  <meta name="description" content="{{ description or 'Leading provider of IT security and data management solutions in Nigeria' }}">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" type="image/x-icon" href="{{ asset('img/logo/favicon.png') }}">
+
+  <!-- ========== Start Stylesheet ========== -->
+  <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet" />
+  <link href="{{ asset('css/fontawesome.min.css') }}" rel="stylesheet" />
+  <link href="{{ asset('css/magnific-popup.css') }}" rel="stylesheet" />
+  <link href="{{ asset('css/owl.carousel.min.css') }}" rel="stylesheet" />
+  <link href="{{ asset('css/owl.theme.default.min.css') }}" rel="stylesheet" />
+  <link href="{{ asset('css/animate.css') }}" rel="stylesheet" />
+  <link href="{{ asset('css/themify-icons.css') }}" rel="stylesheet" />
+  <link href="{{ asset('css/icofont.min.css') }}" rel="stylesheet" />
+  <link href="{{ asset('css/site-flaticon.css') }}" rel="stylesheet" />
+  <link href="{{ asset('css/style.css') }}" rel="stylesheet">
+  <link href="{{ asset('css/responsive.css') }}" rel="stylesheet" />
+  <!-- ========== End Stylesheet ========== -->
+  
+  {# Allow pages to add additional styles #}
+  {% block extra_css %}{% endblock %}
+</head>
+
+<body id="bdy">
+  <div class="se-pre-con">
+       <div class="preloader-content">
+        <div class="company-name">SEGSOL</div>
+        <div class="loading-bar">
+            <div class="loading-bar-fill"></div>
+        </div>
+        <div class="loading-text">Loading...</div>
+    </div>
+
+  </div>
+
+  {% include "partials/header.njk" %}
+
+  {% block maincontent %}{% endblock %}
+
+  <div class="clearfix"></div>
+
+  {% include "partials/footer.njk" %}
+
+  <a href="#bdy" id="scrtop" class="smooth-menu"><i class="ti-arrow-up"></i></a>
+
+  <!-- jQuery/Plugins -->
+  <script src="{{ asset('js/jquery-1.12.4.min.js') }}"></script>
+  <script src="{{ asset('js/popper.min.js') }}"></script>
+  <script src="{{ asset('js/bootstrap.min.js') }}"></script>
+  <script src="{{ asset('js/bootstrap-menu.js') }}"></script>
+  <script src="{{ asset('js/jquery.easing.min.js') }}"></script>
+  <script src="{{ asset('js/jquery.appear.js') }}"></script>
+  <script src="{{ asset('js/modernizr.custom.13711.js') }}"></script>
+  <script src="{{ asset('js/owl.carousel.min.js') }}"></script>
+  <script src="{{ asset('js/jquery.magnific-popup.min.js') }}"></script>
+  <script src="{{ asset('js/isotope.pkgd.min.js') }}"></script>
+  <script src="{{ asset('js/imagesloaded.pkgd.min.js') }}"></script>
+  <script src="{{ asset('js/wow.min.js') }}"></script>
+  <script src="{{ asset('js/wodry.min.js') }}"></script>
+  <script src="{{ asset('js/count-to.js') }}"></script>
+  <script src="{{ asset('js/progress-bar.min.js') }}"></script>
+  <script src="{{ asset('js/color-option.js') }}"></script>
+  <script src="{{ asset('js/typed.js') }}"></script>
+  <script src="{{ asset('js/YTPlayer.min.js') }}"></script>
+  <script src="{{ asset('js/jquery.mixitup.min.js') }}"></script>
+  <script src="{{ asset('js/active-class.js') }}"></script>
+  <script src="{{ asset('js/main.js') }}"></script>
+  <script>
+  (function() {
+    'use strict';
+    
+    window.addEventListener('load', function() {
+        const preloader = document.querySelector('.se-pre-con');
+        
+        // Wait 3 seconds then fade out
+        setTimeout(function() {
+            preloader.classList.add('fade-out');
+            
+            // Remove from DOM after fade animation completes
+            setTimeout(function() {
+                preloader.style.display = 'none';
+            }, 500);
+        }, 3000);
+    });
+})();
+  </script>
+  
+  {# Allow pages to add additional scripts #}
+  {% block extra_js %}{% endblock %}
+</body>
+</html>

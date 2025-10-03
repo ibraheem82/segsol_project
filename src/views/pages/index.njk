@@ -1,0 +1,308 @@
+{% extends "layouts/base.njk" %}
+
+{% block maincontent %}
+<main class="main">
+
+  <!-- Start Slider -->
+  <div class="hero-section hero-sldr owl-carousel owl-theme">
+    <div class="hero-single" style="background-image: url('{{ asset('img/header/hdr1.jpg') }}')">
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-8 offset-xl-2">
+            <div class="hero-content text-center">
+              <h3 class="hero-title">Endpoint and Security Operations</h3>
+              <p>We specialize in endpoint security management, ensuring that all devices connected to your network are secure.</p>
+              <div class="hero-btn">
+                <a href="/contact" target="_blank" class="btn-4">Contact Us</a>
+                <a href="/about" target="_blank" class="btn-4">About Us</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    {# {% static '' %} #}
+    <div class="hero-single" style="background-image: url('{{ asset('img/header/hdr2.jpg') }}')">
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-8 offset-xl-2">
+            <div class="hero-content text-center">
+              <h3 class="hero-title">Protect cloud-based applications</h3>
+              <p>This is even more crucial for securing dynamic working processes as employees increasingly work from home.</p>
+              <div class="hero-btn">
+                <a href="/contact" target="_blank" class="btn-4">Contact Us</a>
+                <a href="/about" target="_blank" class="btn-4">About Us</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    {# {% static '' %} #}
+    <div class="hero-single" style="background-image: url('{{ asset('img/header/hdr3.jpg') }}')">
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-8 offset-xl-2">
+            <div class="hero-content text-center">
+              <h3 class="hero-title">Data loss prevention</h3>
+              <p>Data loss prevention (DLP) enables organizations to detect and prevent potential data breaches.</p>
+              <div class="hero-btn">
+                <a href="/contact" target="_blank" class="btn-4">Contact Us</a>
+                <a href="/about" target="_blank" class="btn-4">About Us</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End Slider -->
+
+  <!-- Start Feature -->
+  <div class="feature-area de-pt">
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-8 offset-xl-2">
+          <div class="site-title text-center">
+            <h3 class="site-sub-heading">
+              Services
+              <span class="site-wave">
+                <img src="{{ asset('img/shape/wave-2.png') }}" alt="wave">
+              </span>
+            </h3>
+            <h2 class="site-heading mb-0">Our Core Services</h2>
+          </div>
+        </div>
+      </div>
+
+      <div class="feature-wpr grid-4">
+        <div class="feature-box">
+          <div class="feature-icon"></div>
+          <div class="feature-desc">
+            <h4>Data Security</h4>
+            <p>Our data security services are designed to safeguard sensitive information against threats and vulnerabilities.</p>
+          </div>
+          <div class="feature-button">
+            <a href="#" class="feature-btn"><i class="icofont-long-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <div class="feature-box">
+          <div class="feature-icon"></div>
+          <div class="feature-desc">
+            <h4>Email Security</h4>
+            <p>
+              Email security tools enable organisations to detect and prevent email-borne security threats. This helps to prevent employees from clicking on
+              harmful links, accessing malicious attachments, or visiting faked websites.
+            </p>
+          </div>
+          <div class="feature-button">
+            <a href="#" class="feature-btn"><i class="icofont-long-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <div class="feature-box">
+          <div class="feature-icon"></div>
+          <div class="feature-desc">
+            <h4>Information and Data Management</h4>
+            <p>We provide innovative data management strategies that facilitate secure data storage, seamless access, and efficient retrieval.</p>
+          </div>
+          <div class="feature-button">
+            <a href="#" class="feature-btn"><i class="icofont-long-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <div class="feature-box">
+          <div class="feature-icon"></div>
+          <div class="feature-desc">
+            <h4>Endpoint and Security Operations</h4>
+            <p>We specialize in endpoint security management, ensuring that all devices connected to your network are secure.</p>
+          </div>
+          <div class="feature-button">
+            <a href="#" class="feature-btn"><i class="icofont-long-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <!-- End Feature -->
+
+  <!-- Start Skill -->
+  <div class="skill about-2 de-padding">
+    <div class="container">
+      <div class="skill-wpr grid-2">
+        <div class="skill-left">
+          <div class="skill-left-pic">
+            <img src="{{ asset('img/shape/image-shape.png') }}" alt="shape">
+            <div class="about-tri">
+              <img src="{{ asset('img/shape/year-shape.png') }}" alt="year">
+              <div class="about-tri-text">
+                <span>9+</span>
+                <p class="mb-0">Years of Experience</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-right">
+          <h3 class="site-sub-heading">
+            About Us
+            <span class="site-wave">
+              <img src="{{ asset('img/shape/wave-2.png') }}" alt="wave">
+            </span>
+          </h3>
+          <h2 class="site-heading">SEGSOL Network Solutions Limited – Empowering Businesses, Securing Futures.</h2>
+          <p class="skill-desc">
+            SEGSOL Network Solutions Limited is a leading provider of comprehensive Information Technology solutions, dedicated to empowering businesses with robust data security and efficient operational management. Our expertise spans across multiple domains, including endpoint and security operations, application and network protection, information and data management, and service delivery.
+          </p>
+
+          <ul class="about-2-list">
+            <li><div class="about-list-opt"><i class="icofont-tick-boxed"></i><h4 class="mb-0">Data Security</h4></div></li>
+            <li><div class="about-list-opt"><i class="icofont-tick-boxed"></i><h4 class="mb-0">Cloud data security</h4></div></li>
+            <li><div class="about-list-opt"><i class="icofont-tick-boxed"></i><h4 class="mb-0">Protect cloud-based applications</h4></div></li>
+            <li><div class="about-list-opt"><i class="icofont-tick-boxed"></i><h4 class="mb-0">Data loss prevention</h4></div></li>
+            <li><div class="about-list-opt"><i class="icofont-tick-boxed"></i><h4 class="mb-0">Endpoint and Security Operations</h4></div></li>
+            <li><div class="about-list-opt"><i class="icofont-tick-boxed"></i><h4 class="mb-0">Information and Data Management</h4></div></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End Skill -->
+
+  {# --- Portfolio (commented out) ---
+  <div id="work" class="project-area bg de-padding">
+    ...
+    <img src="{{ asset('img/work/wrk-2.jpg') }}" alt="thumb">
+    ...
+  </div>
+  #}
+
+  {# --- Blog (commented out) ---
+  <div class="blog-area de-padding">
+    ...
+    <img src="{{ asset('img/blog/1.jpg') }}" alt="thumb">
+    ...
+  </div>
+  #}
+
+  <!-- Start Partner -->
+  <div class="partner-area de-padding bg">
+    <div class="container">
+      <div class="partner-wpr partner-sldr owl-carousel owl-theme">
+        <img src="{{ asset('img/partner/image_3.png') }}" alt="partner">
+        <img src="{{ asset('img/partner/image_4.png') }}" alt="partner">
+        <img src="{{ asset('img/partner/image_9.png') }}" alt="partner">
+        <img src="{{ asset('img/partner/image_13.png') }}" alt="partner">
+        <img src="{{ asset('img/partner/image_18.png') }}" alt="partner">
+        <img src="{{ asset('img/partner/image_23.png') }}" alt="partner">
+        <img src="{{ asset('img/partner/image_27.png') }}" alt="partner">
+        <img src="{{ asset('img/partner/image_32.png') }}" alt="partner">
+        <img src="{{ asset('img/partner/image_34.png') }}" alt="partner">
+      </div>
+    </div>
+  </div>
+  <!-- End Partner -->
+
+  <!-- Start Contact Us -->
+  <div class="contact-us de-padding">
+    <div class="contact-shape">
+      <img src="{{ asset('img/bg/contact-shape.png') }}" alt="shape">
+    </div>
+    <div class="container">
+      <div class="contact-us-wpr">
+        <div class="row g-5">
+          <div class="col-xl-5 col-lg-5">
+            <div class="faq-pic">
+              <img src="{{ asset('img/bg/bg-2.jpg') }}" alt="contact bg">
+              <div class="faq-pic-overlay">
+                <ul>
+                  <li>
+                    <div class="faq-add">
+                      <i class="flaticon-placeholder"></i>
+                      <div class="faq-ad">
+                        <h4>Office Address</h4>
+                        <p class="mb-0">
+                          {{ location }}
+                          <br>Nigeria
+                        </p>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="faq-add">
+                      <i class="flaticon-call"></i>
+                      <div class="faq-ad">
+                        <h4>Call Us</h4>
+                        <p class="mb-0">
+                          {{ phone }}
+                          <br>213-369-4139
+                        </p>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="faq-add">
+                      <i class="flaticon-envelope"></i>
+                      <div class="faq-ad">
+                        <h4>Email Us</h4>
+                        <p class="mb-0">
+                          {{ email }}
+                          <br>
+                        </p>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xl-7 col-lg-7">
+            <form class="contact-form" method="post" action="/contact">
+              <h4 class="contact-tl">Contact us</h4>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <input type="text" class="form-control" name="fname" placeholder="Your Full Name*">
+                    <span class="alert alert-error"></span>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <input type="email" class="form-control" name="email" placeholder="Your Email Address*">
+                    <span class="alert alert-error"></span>
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <div class="form-group">
+                    <input type="text" class="form-control" name="subject" placeholder="Subject...">
+                    <span class="alert alert-error"></span>
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <textarea class="form-control" name="message" placeholder="Your Message..."></textarea>
+                  <div class="contact-sub-btn">
+                    <button type="submit" name="submit" id="submit" class="btn-6">
+                      Send Message <i class="fas fa-chevron-right"></i>
+                    </button>
+                  </div>
+                  <div class="alert-notification">
+                    <div id="message" class="alert-msg"></div>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End Contact Us -->
+
+</main>
+{% endblock %}

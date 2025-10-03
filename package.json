@@ -1,0 +1,33 @@
+{
+  "name": "segsol_project",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "node --watch src/server/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ibraheem82/segsol_project.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ibraheem82/segsol_project/issues"
+  },
+  "homepage": "https://github.com/ibraheem82/segsol_project#readme",
+  "description": "",
+  "dependencies": {
+    "compression": "^1.8.1",
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0",
+    "helmet": "^8.1.0",
+    "morgan": "^1.10.1",
+    "nunjucks": "^3.2.4"
+  },
+  "devDependencies": {
+    "chokidar": "^3.6.0"
+  }
+}
