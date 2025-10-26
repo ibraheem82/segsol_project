@@ -1,7 +1,7 @@
 export async function home(req, res) {
   res.render('pages/index.njk', {
     title: 'Home',
-    description: 'SegSol IT Solutions — Empowering Businesses, Securing Futures.',
+      description: 'SegSol IT Solutions — Empowering Businesses, Securing Futures.',
     location: process.env.ORG_LOCATION || 'Lagos',
     phone: process.env.ORG_PHONE || '+234-813-000-0000',
     email: process.env.ORG_EMAIL || 'info@segsol.com'
