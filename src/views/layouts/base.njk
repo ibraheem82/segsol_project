@@ -1,18 +1,89 @@
 <!doctype html>
-<html class="no-js" lang="zxx">
+<html class="no-js" lang="en-NG">
 <head>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>{{ title or 'SEGSOL - IT Security Solutions' }}</title>
-  <meta name="description" content="{{ description or 'Leading provider of IT security and data management solutions in Nigeria' }}">
+  <title>{% if title %}{{ title }} | SEGSOL Network Solutions{% else %}SEGSOL Network Solutions - IT Security & Data Management in Nigeria{% endif %}</title>
+  <meta name="description" content="{{ description or 'Leading IT security solutions provider in Nigeria. Cybersecurity, data protection, network cabling, fire suppression systems, and professional IT services.' }}">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-{# Favicon #}
+  {# Open Graph Meta Tags #}
+  <meta property="og:title" content="{{ title or 'SEGSOL Network Solutions - IT Security & Data Management' }}">
+  <meta property="og:description" content="{{ description or 'Empowering businesses with robust cybersecurity, data protection, and IT infrastructure solutions in Nigeria.' }}">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="{{ current_url or 'https://segsolns.com' }}">
+  <meta property="og:image" content="{{ asset('img/logo/og-image.jpg') }}">
+  <meta property="og:site_name" content="SEGSOL Network Solutions Limited">
+  <meta property="og:locale" content="en_NG">
+
+  {# Twitter Card Meta Tags #}
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ title or 'SEGSOL - IT Security Solutions Nigeria' }}">
+  <meta name="twitter:description" content="{{ description or 'Leading provider of comprehensive IT security and data management solutions in Nigeria.' }}">
+  <meta name="twitter:image" content="{{ asset('img/logo/twitter-image.jpg') }}">
+  <meta name="twitter:site" content="@segsolns">
+
+  {# Additional SEO Meta Tags #}
+  <meta name="keywords" content="IT security Nigeria, cybersecurity Lagos, data protection, network cabling, fire suppression systems, IT solutions Nigeria, data centers, electrical services, HVAC services, audio integration">
+  <meta name="author" content="SEGSOL Network Solutions Limited">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta name="generator" content="Nunjucks">
+  
+  {# Canonical URL #}
+  <link rel="canonical" href="{{ current_url or 'https://segsolns.com' }}">
+
+  {# Structured Data - Organization JSON-LD #}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "SEGSOL Network Solutions Limited",
+    "alternateName": "SEGSOL",
+    "url": "https://segsolns.com",
+    "logo": "https://segsolns.com/img/logo/logo.png",
+    "description": "Leading provider of comprehensive Information Technology solutions, dedicated to empowering businesses with robust data security and efficient operational management in Nigeria.",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "22 Amodu Tijani Close, Off Sanusi Fafunwa",
+      "addressLocality": "Victoria Island",
+      "addressRegion": "Lagos",
+      "addressCountry": "NG"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+234-803-464-1422",
+      "contactType": "sales",
+      "email": "olusegun.ayodele@segsolns.com",
+      "availableLanguage": "en"
+    },
+    "sameAs": [
+      "https://www.linkedin.com/company/segsolns",
+      "https://twitter.com/segsolns"
+    ],
+    "areaServed": "Nigeria",
+    "knowsAbout": [
+      "Cybersecurity",
+      "Data Security",
+      "Network Cabling",
+      "Data Centers",
+      "Fire Suppression Systems",
+      "IT Infrastructure",
+      "Endpoint Security",
+      "Email Security"
+    ]
+  }
+  </script>
+
+  {# Favicon #}
   <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('img/logo/favicon-32x32.png') }}">
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('img/logo/apple-touch-icon.png') }}">
+  <link rel="shortcut icon" type="image/x-icon" href="{{ asset('img/logo/favicon.ico') }}">
 
-<link rel="apple-touch-icon" sizes="180x180" href="{{ asset('img/logo/apple-touch-icon.png') }}">
+  {# Preload critical resources #}
+  <link rel="preload" href="{{ asset('css/bootstrap.min.css') }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="{{ asset('css/fontawesome.min.css') }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preconnect" href="https://embed.tawk.to">
 
-<link rel="shortcut icon" type="image/x-icon" href="{{ asset('img/logo/favicon.ico') }}">
   <!-- ========== Start Stylesheet ========== -->
   <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet" />
   <link href="{{ asset('css/fontawesome.min.css') }}" rel="stylesheet" />
@@ -31,7 +102,11 @@
   {% block extra_css %}{% endblock %}
 </head>
 
-<body id="bdy">
+<body id="bdy" itemscope itemtype="https://schema.org/WebPage">
+  {# Hidden structured data for current page #}
+  <meta itemprop="name" content="{{ title or 'SEGSOL Network Solutions' }}">
+  <meta itemprop="description" content="{{ description or 'IT Security Solutions in Nigeria' }}">
+  
   <div class="se-pre-con">
        <div class="preloader-content">
         <div class="company-name">SEGSOL</div>
@@ -40,18 +115,19 @@
         </div>
         <div class="loading-text">Loading...</div>
     </div>
-
   </div>
 
   {% include "partials/header.njk" %}
 
-  {% block maincontent %}{% endblock %}
+  <main itemprop="mainContentOfPage">
+    {% block maincontent %}{% endblock %}
+  </main>
 
   <div class="clearfix"></div>
 
   {% include "partials/footer.njk" %}
 
-  <a href="#bdy" id="scrtop" class="smooth-menu"><i class="ti-arrow-up"></i></a>
+  <a href="#bdy" id="scrtop" class="smooth-menu" aria-label="Scroll to top"><i class="ti-arrow-up"></i></a>
 
   <!-- jQuery/Plugins -->
   <script src="{{ asset('js/jquery-1.12.4.min.js') }}"></script>
@@ -75,6 +151,7 @@
   <script src="{{ asset('js/jquery.mixitup.min.js') }}"></script>
   <script src="{{ asset('js/active-class.js') }}"></script>
   <script src="{{ asset('js/main.js') }}"></script>
+  
   <script>
   (function() {
     'use strict';
@@ -92,23 +169,22 @@
             }, 500);
         }, 3000);
     });
-})();
+  })();
   </script>
 
-
   <!--Start of Tawk.to Script-->
-<script type="text/javascript">
-var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-(function(){
-var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-s1.async=true;
-s1.src='https://embed.tawk.to/68dde2604b8746194e6d3a1c/1j6hcp4ur';
-s1.charset='UTF-8';
-s1.setAttribute('crossorigin','*');
-s0.parentNode.insertBefore(s1,s0);
-})();
-</script>
-<!--End of Tawk.to Script-->
+  <script type="text/javascript">
+  var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+  (function(){
+  var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+  s1.async=true;
+  s1.src='https://embed.tawk.to/68dde2604b8746194e6d3a1c/1j6hcp4ur';
+  s1.charset='UTF-8';
+  s1.setAttribute('crossorigin','*');
+  s0.parentNode.insertBefore(s1,s0);
+  })();
+  </script>
+  <!--End of Tawk.to Script-->
   
   {# Allow pages to add additional scripts #}
   {% block extra_js %}{% endblock %}
